@@ -1,0 +1,14 @@
+Versionamento de código pelo Git Bash
+
+no git
+comando git = dá todos os comandos que podem ser usados
+
+digitar git init (para criar uma pasta/repositorio do git)
+
+git status = mostra como estão os conteúdos da pasta, em termos de trabalho
+
+untracked file: são os arquivos que o git ainda não versionou
+
+git add <file> : adiciona arquivo (ex: git add arquivo.txt)
+
+fase staged:
