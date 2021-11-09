@@ -1,0 +1,71 @@
+:root {
+    --std-main-color: #7480FF;
+}
+
+* { box-sizing: border-box; }
+
+#toggle { /* tornando a checkbox padrão invisível */
+    height: 0;
+    width: 0;
+    max-width: 380px;
+    display: none;
+}
+
+.switch {
+    display: inline-block;
+    position: relative;
+    min-width: 200px;
+    max-width: 200px;
+    height: 50px;
+    background-color: var(--std-main-color);
+    border-radius: 50px;
+    padding: 0 1rem;
+
+    /* alinhamento dos itens de texto */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.text {
+    font-family: 'Molengo', sans-serif;
+    font-size: 1.3rem;
+    transition: .4s;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.text.cad { color: var(--std-main-color); } /* cor padrão do primeiro estado */
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center; /* alinhamento vertical do slider */
+    transition: .4s;
+}
+
+.slider::before {
+    position: absolute;
+    content: '';
+    height: 2.75rem;
+    width: 6.75rem; /* ajuste de largura manual do primeiro estado */
+    left: 3px;
+    background-color: #fff;
+    transition: .4s;
+    border-radius: 50px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .4);
+}
+
+#toggle:checked ~ .slider::before {
+    width: 4.9rem; /* ajuste de largura manual do botão no segundo estado */
+    transform: translateX(7.25rem); /* movimenta o botão */
+}
+
+#toggle:checked ~ .text.log { color: var(--std-main-color); } /* quando Login estiver ativado, fica com texto da cor do fundo */
+#toggle:checked ~ .text.cad { color: white; } /* quando Cadastrar estiver desativado, fica com texto branco */
