@@ -84,10 +84,10 @@ input:-moz-placeholder { color: #827ffe;}
 input::-moz-placeholder { color: #827ffe;}
 input:-ms-input-placeholder { color: #827ffe;}
 
-textarea::-webkit-input-placeholder { color: #8f8fa1;}
-textarea:-moz-placeholder { color: #8f8fa1;}
-textarea::-moz-placeholder { color: #8f8fa1;}
-textarea:-ms-input-placeholder { color: #8f8fa1;}
+textarea::-webkit-input-placeholder { color: whitesmoke;}
+textarea:-moz-placeholder { color: whitesmoke}
+textarea::-moz-placeholder { color: whitesmoke}
+textarea:-ms-input-placeholder { color: whitesmoke}
 
 label {
   display: block;
@@ -154,8 +154,10 @@ iframe {
 }
 
 .lbl-input {
+  margin: auto;
   position: relative;
   max-width: 380px;
+  min-width: 200px;
   width: 100%;
   max-height: 58px;
   height: 100%;
@@ -271,6 +273,7 @@ iframe {
 
 .login100-form-btn:hover {
   background-color: #7480FF;
+  color: whitesmoke;
 }
 
 /*------------------------------------------------------------------
@@ -309,6 +312,13 @@ iframe {
   -o-transition: opacity 0.4s;
   -moz-transition: opacity 0.4s;
   transition: opacity 0.4s;
+}
+
+#img-intersection{
+  max-width: 900px;
+  min-width: 200px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .alert-validate::after {
